@@ -65,18 +65,34 @@ const outerNodes: HubNode[] = [
 export default function HeroHub() {
   const [mounted, setMounted] = useState(false);
   const [hovered, setHovered] = useState<number | null>(null);
+  const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setWindowWidth(window.innerWidth);
+    
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const getNodePos = (angle: number, radius: number) => {
+  const isMobile = mounted && windowWidth < 768;
+  const isSmallMobile = mounted && windowWidth < 480;
+
+  const getNodePos = (angle: number, r: number) => {
     const rad = (angle * Math.PI) / 180;
     return {
-      x: Math.cos(rad) * radius,
-      y: Math.sin(rad) * radius,
+      x: Math.cos(rad) * r,
+      y: Math.sin(rad) * r,
     };
   };
 
-  const radius = 240;
+  const radius = isSmallMobile ? 130 : isMobile ? 160 : 240;
+  const hubSize = isMobile ? 400 : 600;
+  const hubCenter = hubSize / 2;
+  const outerNodeSize = isSmallMobile ? 100 : isMobile ? 120 : 140;
+  const outerNodeOffset = outerNodeSize / 2;
+  const centerNodeSize = isSmallMobile ? 140 : isMobile ? 160 : 220;
 
   return (
     <section
@@ -112,12 +128,12 @@ export default function HeroHub() {
       <div
         className="absolute pointer-events-none"
         style={{
-          width: "801px",
-          height: "384px",
+          width: isMobile ? "100%" : "801px",
+          height: isMobile ? "280px" : "384px",
           borderRadius: "9999px",
           background: "#000000",
-          filter: "blur(77.5px)",
-          top: "215px",
+          filter: isMobile ? "blur(50px)" : "blur(77.5px)",
+          top: isMobile ? "180px" : "215px",
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 1,
@@ -130,7 +146,7 @@ export default function HeroHub() {
         style={{ zIndex: 1, mixBlendMode: "lighten" }}
         initial={{ scale: 0.5, rotate: -20, opacity: 0 }}
         animate={{
-          scale: [0.5, 1.2, 1],
+          scale: isMobile ? [0.3, 0.7, 0.6] : [0.5, 1.2, 1],
           rotate: [-20, 10, 0],
           opacity: [0, 0.2, 0.15],
           y: [0, -20, 0],
@@ -149,8 +165,8 @@ export default function HeroHub() {
         <Image
           src="/logo.png"
           alt="Henafek Homes Logo Watermark"
-          width={800}
-          height={800}
+          width={isMobile ? 400 : 800}
+          height={isMobile ? 400 : 800}
           className="max-w-none grayscale brightness-150"
           priority
         />
@@ -160,8 +176,12 @@ export default function HeroHub() {
 
       {/* Hub Container */}
       <div
-        className="relative w-[600px] h-[500px] flex items-center justify-center mx-auto"
-        style={{ zIndex: 2 }}
+        className="relative flex items-center justify-center mx-auto"
+        style={{ 
+          zIndex: 2,
+          width: hubSize,
+          height: isMobile ? hubSize - 100 : hubSize - 100 
+        }}
       >
         {mounted && (
           <svg
@@ -180,10 +200,10 @@ export default function HeroHub() {
               return (
                 <motion.line
                   key={i}
-                  x1="300"
-                  y1="250"
-                  x2={300 + pos.x}
-                  y2={250 + pos.y}
+                  x1={hubCenter}
+                  y1={hubCenter - 50}
+                  x2={hubCenter + pos.x}
+                  y2={hubCenter - 50 + pos.y}
                   stroke={node.lineColor}
                   strokeWidth={hovered === i ? 2 : 1}
                   strokeDasharray="4 4"
@@ -200,12 +220,17 @@ export default function HeroHub() {
         <Link href="/services/consulting">
           <motion.div
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer group"
+            style={{
+              marginTop: -50,
+              width: centerNodeSize,
+              height: centerNodeSize
+            }}
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, type: "spring" }}
           >
-            <div className="hub-center glass flex flex-col items-center justify-center animate-pulse-glow group-hover:scale-105 transition-transform">
-              <span className="text-2xl font-bold text-white tracking-widest text-glow-blue">
+            <div className="hub-center glass flex flex-col items-center justify-center animate-pulse-glow group-hover:scale-105 transition-transform w-full h-full">
+              <span className={`${isMobile ? 'text-lg' : 'text-2xl'} font-bold text-white tracking-widest text-glow-blue`}>
                 CONSULTING
               </span>
             </div>
@@ -221,8 +246,10 @@ export default function HeroHub() {
               key={i}
               className="absolute z-10"
               style={{
-                left: `calc(50% + ${pos.x}px - 70px)`,
-                top: `calc(50% + ${pos.y}px - 70px)`,
+                left: `calc(50% + ${pos.x}px - ${outerNodeOffset}px)`,
+                top: `calc(50% + ${pos.y}px - ${outerNodeOffset}px - 50px)`,
+                width: outerNodeSize,
+                height: outerNodeSize
               }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -232,17 +259,17 @@ export default function HeroHub() {
             >
               <Link href={node.href}>
                 <div
-                  className={`hub-outer glass ${node.colorClass} flex flex-col items-center justify-center text-center p-4 transition-all duration-300 hover:scale-110`}
+                  className={`hub-outer glass ${node.colorClass} flex flex-col items-center justify-center text-center p-2 transition-all duration-300 hover:scale-110 w-full h-full`}
                 >
                   <NodeIcon
-                    size={32}
+                    size={isMobile ? 24 : 32}
                     className={
                       node.colorClass === "cyan"
                         ? "text-[var(--color-neon-blue)]"
                         : "text-[var(--color-gold)]"
                     }
                   />
-                  <span className="text-[10px] font-bold tracking-wider text-white uppercase mt-2 leading-tight">
+                  <span className={`${isSmallMobile ? 'text-[8px]' : 'text-[10px]'} font-bold tracking-wider text-white uppercase mt-1 leading-tight px-1`}>
                     {node.label}
                   </span>
                 </div>
@@ -254,22 +281,22 @@ export default function HeroHub() {
 
       {/* Subheading + CTAs */}
       <motion.div
-        className="text-center mt-8 px-6"
+        className={`text-center ${isMobile ? 'mt-4' : 'mt-8'} px-6`}
         style={{ zIndex: 2, position: "relative" }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+        <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl'} font-bold text-white mb-3 leading-tight`}>
           <span className="text-[var(--color-gold)]">HENAFEK</span> HOMES
         </h1>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+        <p className={`${isMobile ? 'text-base' : 'text-lg'} text-gray-400 max-w-2xl mx-auto mb-8`}>
           Professional Multi-sector Consulting & Infrastructure Solutions
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-wrap gap-3 justify-center">
           <LiquidGlassButton 
             onClick={() => window.location.href = "/contact"} 
-            className="text-sm px-8 py-3 rounded-full"
+            className={`text-sm ${isMobile ? 'px-6 py-2.5' : 'px-8 py-3'} rounded-full`}
           >
             Get Consultation
           </LiquidGlassButton>
