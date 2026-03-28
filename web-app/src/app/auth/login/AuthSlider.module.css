@@ -1,0 +1,317 @@
+.bodyWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: transparent;
+    position: relative;
+    font-family: inherit;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    margin: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    /* Glassmorphism base for Dark Navy Theme */
+    background: rgba(10, 22, 40, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 180, 255, 0.05);
+}
+
+.container h1 {
+    font-size: 36px;
+    margin: -10px 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.container form { width: 100%; }
+
+.formBox {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: right 0.6s ease-in-out;
+}
+
+.container.active .formBox { right: 50%; }
+
+.formBox.login { 
+    opacity: 1; 
+    visibility: visible;
+    transition: opacity 0.3s ease 0.3s, visibility 0.3s ease 0.3s;
+}
+.container.active .formBox.login { 
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+}
+
+.formBox.register { 
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+}
+.container.active .formBox.register { 
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 0.3s ease 0.3s, visibility 0.3s ease 0.3s;
+}
+
+.inputBox {
+    position: relative;
+    margin: 30px 0;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.inputBox input:focus {
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(212, 168, 83, 0.1);
+}
+
+.inputBox input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 400;
+}
+
+.icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.inputBox input:focus + .icon {
+    color: var(--color-gold);
+}
+
+.forgotLink { margin: -15px 0 15px; text-align: left; }
+.forgotLink a {
+    font-size: 13px;
+    color: var(--color-neon-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+.forgotLink a:hover {
+    opacity: 0.8;
+}
+
+.btn {
+    width: 100%;
+    height: 52px;
+    background: linear-gradient(135deg, var(--color-gold) 0%, #b88a44 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px -6px rgba(212, 168, 83, 0.4);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #020617;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -6px rgba(212, 168, 83, 0.6);
+}
+
+.btn:disabled {
+    background: rgba(212, 168, 83, 0.5);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.iconWrapper {
+    display: inline-flex;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.02);
+    margin: 0 8px;
+    transition: all 0.3s;
+}
+
+.iconWrapper:hover {
+    background: var(--color-neon-blue);
+    border-color: var(--color-neon-blue);
+    color: #020617;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 180, 255, 0.3);
+}
+
+.toggleBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.toggleBox::before {
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    /* Solid opaque background is absolutely critical so the other form does not show through */
+    background: #060d1a;
+    background: linear-gradient(135deg, #020617 0%, #0a1628 100%);
+    border-radius: 150px;
+    border-right: 2px solid var(--color-gold);
+    border-left: 2px solid var(--color-gold);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(0, 180, 255, 0.05);
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+}
+
+.container.active .toggleBox::before { left: 50%; }
+
+.togglePanel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: .6s ease-in-out;
+    pointer-events: auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.togglePanel h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.togglePanel p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.toggleLeft { 
+    left: 0;
+    transition-delay: 1.2s; 
+}
+.container.active .toggleLeft {
+    left: -50%;
+    transition-delay: .6s;
+}
+
+.toggleRight { 
+    right: -50%;
+    transition-delay: .6s;
+}
+.container.active .toggleRight {
+    right: 0;
+    transition-delay: 1.2s;
+}
+
+.togglePanel .btn {
+    width: 180px;
+    height: 52px;
+    background: transparent;
+    border: 2px solid var(--color-gold);
+    color: var(--color-gold);
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+.togglePanel .btn:hover {
+    background: var(--color-gold);
+    color: #020617;
+    box-shadow: 0 8px 20px -6px rgba(212, 168, 83, 0.5);
+}
+
+@media screen and (max-width: 650px) {
+    .container { height: calc(100vh - 40px); }
+    .formBox {
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+    }
+    .container.active .formBox {
+        right: 0;
+        bottom: 30%;
+    }
+    .toggleBox::before {
+        left: 0;
+        top: -270%;
+        width: 100%;
+        height: 300%;
+        border-radius: 20vw;
+    }
+    .container.active .toggleBox::before {
+        left: 0;
+        top: 70%;
+    }
+    .container.active .toggleLeft {
+        left: 0;
+        top: -30%;
+    }
+    .togglePanel { 
+        width: 100%;
+        height: 30%;
+    }
+    .toggleLeft { top: 0; }
+    .toggleRight {
+        right: 0;
+        bottom: -30%;
+    }
+    .container.active .toggleRight { bottom: 0; }
+}
+
+@media screen and (max-width: 400px) {
+    .formBox { padding: 20px; }
+    .togglePanel h1 { font-size: 30px; }
+}
