@@ -151,6 +151,7 @@ export default function HeroHub() {
           alt="Henafek Homes Logo Watermark"
           width={800}
           height={800}
+          unoptimized={true}
           className="max-w-none grayscale brightness-150"
           priority
         />

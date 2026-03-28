@@ -52,6 +52,7 @@ export default function Footer() {
                 alt="Henafek Homes"
                 width={40}
                 height={40}
+                unoptimized={true}
                 className="rounded-lg"
               />
               <span className="text-lg font-bold">

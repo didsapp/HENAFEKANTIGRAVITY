@@ -52,6 +52,7 @@ export default function Navbar() {
             alt="Henafek Homes"
             width={48}
             height={48}
+            unoptimized={true}
             className="rounded-lg group-hover:scale-105 transition-transform"
           />
           <span className="text-xl font-bold tracking-wide">
