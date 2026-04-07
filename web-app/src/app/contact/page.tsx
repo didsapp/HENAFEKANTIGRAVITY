@@ -157,8 +157,7 @@ export default function ContactPage() {
                     <div className="text-xs text-gray-500 mb-1">Phone</div>
                     <div className="text-sm leading-relaxed">
                       08023424190<br />
-                      08118480296<br />
-                      08184914571
+                      08118480296
                     </div>
                   </div>
                 </div>
