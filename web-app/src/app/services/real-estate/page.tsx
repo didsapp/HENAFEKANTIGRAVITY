@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import RealEstateGallerySection from "@/components/RealEstateGallerySection";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
+import ShopGallery from "@/components/ShopGallery";
 
 const services = [
   {
@@ -93,8 +94,13 @@ export default function RealEstatePage() {
           ))}
         </div>
 
-        {/* Real Estate Gallery Section */}
-        <RealEstateGallerySection />
+        {/* Real Estate Inventory Shop Gallery */}
+        <ShopGallery type="real-estate" />
+
+        {/* Real Estate Gallery Section (Previously Slider) */}
+        <div className="mt-20">
+           <RealEstateGallerySection />
+        </div>
 
         {/* CTA */}
         <motion.div

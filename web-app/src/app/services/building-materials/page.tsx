@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import LiquidGlassButton from "@/components/LiquidGlassButton";
 import QualityMaterialsSection from "@/components/QualityMaterialsSection";
+import ShopGallery from "@/components/ShopGallery";
 
 const services = [
   {
@@ -90,8 +91,13 @@ export default function BuildingMaterialsPage() {
           ))}
         </div>
 
-        {/* New Quality Materials Carousel Section */}
-        <QualityMaterialsSection />
+        {/* Building Materials Inventory Shop Gallery */}
+        <ShopGallery type="building-materials" />
+
+        {/* Quality Materials Carousel Section */}
+        <div className="mt-20">
+           <QualityMaterialsSection />
+        </div>
 
         <motion.div
           className="glass p-12 text-center mt-10"

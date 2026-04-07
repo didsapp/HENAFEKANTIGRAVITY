@@ -1,0 +1,201 @@
+﻿
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\about\page.tsx
+   7:3  warning  'Target' is defined but never used        @typescript-eslint/no-unused-vars
+  18:3  warning  'Home' is defined but never used          @typescript-eslint/no-unused-vars
+  19:3  warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\admin\adminActions.ts
+  33:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\admin\invoices\page.tsx
+   9:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  10:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\admin\messages\page.tsx
+   4:10  warning  'motion' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  11:42  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+  12:56  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+  13:44  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+  19:6   warning  React Hook useEffect has a missing dependency: 'fetchClients'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  35:39  error    Unexpected any. Specify a different type                                                                         @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\admin\page.tsx
+  17:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  18:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  19:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\admin\projects\page.tsx
+   5:36  warning  'Edit3' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   9:44  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  10:42  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  13:44  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  23:38  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  91:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\admin\users\page.tsx
+  9:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\api\invoices\route.ts
+  13:27  warning  'req' is defined but never used    @typescript-eslint/no-unused-vars
+  35:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  63:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\api\projects\route.ts
+  12:27  warning  'req' is defined but never used    @typescript-eslint/no-unused-vars
+  30:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+  57:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\api\users\route.ts
+   5:27  warning  'req' is defined but never used    @typescript-eslint/no-unused-vars
+  26:12  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\layout.tsx
+  31:9  warning  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\page.tsx
+  13:3  warning  'ChevronRight' is defined but never used       @typescript-eslint/no-unused-vars
+  21:7  warning  'services' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\portal\invoices\page.tsx
+  9:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\portal\messages\page.tsx
+  10:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\portal\page.tsx
+   19:36   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   61:159  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  107:42   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  142:36   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\portal\profile\page.tsx
+  90:115  error  'CheckCircle' is not defined  react/jsx-no-undef
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\portal\projects\page.tsx
+  9:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\projects\page.tsx
+    7:3   warning  'Building2' is defined but never used        @typescript-eslint/no-unused-vars
+    8:3   warning  'Wrench' is defined but never used           @typescript-eslint/no-unused-vars
+    9:3   warning  'Landmark' is defined but never used         @typescript-eslint/no-unused-vars
+   11:3   warning  'HardHat' is defined but never used          @typescript-eslint/no-unused-vars
+   14:3   warning  'Search' is defined but never used           @typescript-eslint/no-unused-vars
+   64:7   warning  'fadeUp' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  146:45  warning  'i' is defined but never used                @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\services\building-materials\page.tsx
+  4:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\services\construction\page.tsx
+   5:8  warning  'Link' is defined but never used                   @typescript-eslint/no-unused-vars
+  40:7  warning  'projectTypes' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\services\consulting\page.tsx
+  4:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\services\engineering\page.tsx
+   5:8  warning  'Link' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  73:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\services\engineering\page.tsx:73:5
+  71 |
+  72 |   useEffect(() => {
+> 73 |     setIsMobile(window.innerWidth < 768);
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  74 |     const handleResize = () => setIsMobile(window.innerWidth < 768);
+  75 |     window.addEventListener('resize', handleResize);
+  76 |     return () => window.removeEventListener('resize', handleResize);  react-hooks/set-state-in-effect
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\app\services\real-estate\page.tsx
+  4:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\auth.ts
+  45:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\HeroHub.tsx
+  11:3  warning  'ChevronRight' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  21:9  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+  71:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\HeroHub.tsx:71:5
+  69 |
+  70 |   useEffect(() => {
+> 71 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  72 |     setWindowWidth(window.innerWidth);
+  73 |     
+  74 |     const handleResize = () => setWindowWidth(window.innerWidth);  react-hooks/set-state-in-effect
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\LiquidGlassButton.tsx
+  70:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\LiquidGlassButton.tsx:70:5
+  68 |   
+  69 |   useEffect(() => {
+> 70 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  71 |   }, []);
+  72 |
+  73 |   return (  react-hooks/set-state-in-effect
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\Navbar.tsx
+  25:9  warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\ParticleBackground.tsx
+  15:9  error  'particles' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\ShopGallery.tsx
+    6:18  warning  'Filter' is defined but never used                               @typescript-eslint/no-unused-vars
+    6:34  warning  'ChevronRight' is defined but never used                         @typescript-eslint/no-unused-vars
+    6:48  warning  'ShoppingCart' is defined but never used                         @typescript-eslint/no-unused-vars
+    6:62  warning  'Tag' is defined but never used                                  @typescript-eslint/no-unused-vars
+  119:73  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  206:11  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  206:30  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\ThemeToggle.tsx
+  11:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\ThemeToggle.tsx:11:5
+   9 |
+  10 |   useEffect(() => {
+> 11 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  12 |     // Initialize: site defaults to dark
+  13 |     const html = document.documentElement;
+  14 |     if (!html.classList.contains("light")) {  react-hooks/set-state-in-effect
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\admin\AdminSidebar.tsx
+  15:3  warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hall of faith\Desktop\HENAFEK HOMES\HENAFEK SITE\web-app\src\components\portal\ClientSidebar.tsx
+   4:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+  14:3   warning  'Bell' is defined but never used    @typescript-eslint/no-unused-vars
+
+Γ£û 73 problems (33 errors, 40 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

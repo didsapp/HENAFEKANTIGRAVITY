@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { UserCircle, ShieldCheck, Mail, Save, Loader2 } from "lucide-react";
+import { UserCircle, ShieldCheck, Mail, Save, Loader2, CheckCircle } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { updateClientProfile } from "../portalActions";
 import { motion } from "framer-motion";
