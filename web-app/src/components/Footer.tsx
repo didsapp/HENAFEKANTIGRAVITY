@@ -12,6 +12,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import ViewCounter from "./ViewCounter";
 
 const footerLinks = {
   Services: [
@@ -74,6 +75,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            <ViewCounter />
           </div>
 
           {/* Links */}
